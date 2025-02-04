@@ -11,7 +11,7 @@ body {
 
 .banner {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(46, 85, 59, 1.0)),
-                      url("../../img/Home_banner_background.png");
+                      url("../../../../resources/img/Home_banner_background.png");
     display: flex;
     flex-direction: row;
     height: 20vh;
@@ -22,7 +22,7 @@ body {
 h1 {
     color: #222222;
     font-size: 2em;
-    margin: 0 10px;
+    margin : 0 10px 0 5px;
 }
 
 .logo-container {
@@ -33,31 +33,24 @@ h1 {
 }
 
 .logo {
-    height: 80%;
+    height: 85%;
     aspect-ratio: auto;
     border-radius: 10%;
-    margin: 0 10px;
+    margin : 0 5px 0 10px;
 }
 
 blockquote {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     font-family: 'Amiri', serif;
     text-align: right;
     background: linear-gradient(135deg, #faf3e0, #f0e0c0);
-    color: #654321;
-    padding: 15px;
+    color: rgb(101, 67, 33);
+    padding: 5px;
     border-radius: 8px;
-    border-right: 5px solid #c19a6b;
-  }
-  blockquote::before {
-    content: "﴾ ";
-    font-size: 2rem;
-    color: #c19a6b;
-  }
-  blockquote::after {
-    content: " ﴿";
-    font-size: 2rem;
-    color: #c19a6b;
+    border-right: 8px solid rgb(193, 154, 107);
+    max-width: 40vw;
+    max-height: 18vh;
+    align-items: center;
   }
   
 
@@ -95,12 +88,12 @@ nav a.home {
 }
 
 nav a:not(.home) {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(193, 154, 107, 0.4);
+    border: 2px solid rgba(193, 154, 107, 0.6);
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(193, 154, 107, 0.2);
     color: #fff;
 }
 
@@ -109,39 +102,113 @@ nav a:hover {
 .main {
     display: flex;
     flex-direction: row;
-    height: 65vh;
+    justify-content: space-between;
     align-items: center;
+    padding: 40px 5%;
+    background: #faf3e0;
+    flex-wrap: wrap;
 }
 
+/* ---- NEWS SECTION ---- */
 .news {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px;
+    width: 35%;
+    background: rgba(101, 67, 33, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.news h2 {
+    color: rgb(101, 67, 33);
+    margin-bottom: 10px;
 }
 
 .news-items {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
+.news-items p {
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    color: rgb(101, 67, 33);
+    transition: color 0.3s;
+}
+
+.news-items p:hover {
+    color: rgba(101, 67, 33, 0.7);
+}
+
+.news-item {
+    max-width: 100%;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.news-item img:hover {
+    transform: scale(1.05);
+}
+
+/* ---- BOOKS SECTION ---- */
 .books {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 60px;
+    width: 60%;
 }
 
-.books-items {
-    display: flex;
-    flex-direction: column;
-    
+.books h2 {
+    color: rgb(101, 67, 33);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.books-item {
+    width: 35%;
+    height: 60%;
+    background: rgba(101, 67, 33, 0.3);
+    padding: 0 15px 10px 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    transition: transform 0.3s;
+}
+
+.books-item:hover {
+    transform: translateY(-5px);
 }
 
 .books-item img {
-    max-width: 30vw;
-    max-height: 40vh;
+    width: 100%;
+    height: fit-content;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .news, .books {
+        width: 90%;
+    }
+    .books {
+        justify-content: space-between;
+    }
+    .books-item {
+        width: 100%;
+    }
 }
 
 /*-----------------------------------*/
@@ -154,6 +221,8 @@ footer {
     justify-content: center;
     background: linear-gradient(to bottom, rgba(69, 125, 88, 1.0), rgba(46, 85, 59, 1.0)),
                 radial-gradient(circle, rgba(69, 125, 88, 1.0), rgba(46, 85, 59, 1.0));
+    color: #222;
+    font-weight: bold;
 }
 
 /*-----------------------------------*/
