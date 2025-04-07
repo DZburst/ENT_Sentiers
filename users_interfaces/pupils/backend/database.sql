@@ -1,85 +1,90 @@
 CREATE TABLE USERS (
-    id SERIAL PRIMARY KEY,
-    username VARCHAR(50) UNIQUE NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    password_hash TEXT NOT NULL,
-    role VARCHAR(20) CHECK (role IN ('admin', 'teacher', 'student', 'parent')),
-    parent_id INT REFERENCES USERS(id) ON DELETE SET NULL
+    _id SERIAL PRIMARY KEY,
+    _name VARCHAR(50) NOT NULL,
+    _surname VARCHAR(50) NOT NULL,
+    _age INT NOT NULL CHECK (_age >= 0),
+    _username VARCHAR(50) UNIQUE NOT NULL,
+    _password_hash TEXT NOT NULL,
+    _email VARCHAR(100) UNIQUE CHECK ((_age >= 18 AND _email IS NOT NULL) OR (_age < 18 AND _email IS NULL)),
+    _role VARCHAR(20) CHECK (_role IN ('admin', 'teacher', 'student')),
+    _parent_name VARCHAR(50),
+    _parent_email VARCHAR(100) UNIQUE,
+    CHECK ((_age < 18 AND _parent_name IS NOT NULL AND _parent_email IS NOT NULL) OR (_age >= 18))
 );
 
 CREATE TABLE NEWS (
-    id SERIAL PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    content TEXT,
-    image_url TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    _id SERIAL PRIMARY KEY,
+    _title VARCHAR(255) NOT NULL,
+    _content TEXT,
+    _image_url TEXT,
+    _created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE SUBJECTS (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    teacher_id INT REFERENCES USERS(id) ON DELETE CASCADE
+    _id SERIAL PRIMARY KEY,
+    _name VARCHAR(50) NOT NULL,
+    _teacher_id INT REFERENCES USERS(_id) ON DELETE CASCADE
 );
 
 CREATE TABLE CLASSROOMS (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(10) UNIQUE NOT NULL,
-    nb_seats INT NOT NULL CHECK (nb_seats > 0)
+    _id SERIAL PRIMARY KEY,
+    _name VARCHAR(10) UNIQUE NOT NULL,
+    _nb_seats INT NOT NULL CHECK (_nb_seats > 0)
 );
 
 CREATE TABLE CLASSES (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    subject_id INT REFERENCES SUBJECTS(id) ON DELETE CASCADE,
-    students INT[] NOT NULL,
-    level VARCHAR(15) CHECK (level IN ('Débutant', 'Intermédiaire', 'Avancé')),
-    classroom_id INT REFERENCES CLASSROOMS(id) ON DELETE CASCADE,
-    start_time TIME NOT NULL,
-    end_time TIME NOT NULL,
-    day_of_week VARCHAR(10) CHECK (day_of_week IN ('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'))
+    _id SERIAL PRIMARY KEY,
+    _name VARCHAR(50) NOT NULL,
+    _subject_id INT REFERENCES SUBJECTS(_id) ON DELETE CASCADE,
+    _students INT[] NOT NULL,
+    _level VARCHAR(15) CHECK (level IN ('Débutant', 'Intermédiaire', 'Avancé')),
+    _classroom_id INT REFERENCES CLASSROOMS(_id) ON DELETE CASCADE,
+    _start_time TIME NOT NULL,
+    _end_time TIME NOT NULL,
+    _day_of_week VARCHAR(10) CHECK (_day_of_week IN ('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'))
 );
 
 CREATE TABLE GRADES (
-    id SERIAL PRIMARY KEY,
-    student_id INT REFERENCES USERS(id) ON DELETE CASCADE,
-    subject_id INT REFERENCES SUBJECTS(id) ON DELETE CASCADE,
-    grade DECIMAL(4,2) CHECK (grade BETWEEN 0 AND 20),
-    comment TEXT,
-    date_assigned DATE NOT NULL
+    _id SERIAL PRIMARY KEY,
+    _student_id INT REFERENCES USERS(_id) ON DELETE CASCADE,
+    _subject_id INT REFERENCES SUBJECTS(_id) ON DELETE CASCADE,
+    _grade DECIMAL(4,2) CHECK (_grade BETWEEN 0 AND 20),
+    _comment TEXT,
+    _date_assigned DATE NOT NULL
 );
 
 CREATE TABLE REMARKS (
-    id SERIAL PRIMARY KEY,
-    student_id INT REFERENCES USERS(id) ON DELETE CASCADE,
-    teacher_id INT REFERENCES USERS(id) ON DELETE CASCADE,
-    content TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    _id SERIAL PRIMARY KEY,
+    _student_id INT REFERENCES USERS(_id) ON DELETE CASCADE,
+    _teacher_id INT REFERENCES USERS(_id) ON DELETE CASCADE,
+    _content TEXT NOT NULL,
+    _created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE HOMEWORKS (
-    id SERIAL PRIMARY KEY,
-    class_id INT REFERENCES CLASSES(id) ON DELETE CASCADE,
-    subject_id INT REFERENCES SUBJECTS(id) ON DELETE CASCADE,
-    title VARCHAR(255) NOT NULL,
-    description TEXT,
-    due_date DATE NOT NULL DEFAULT CURRENT_DATE + INTERVAL '1 week'
+    _id SERIAL PRIMARY KEY,
+    _class_id INT REFERENCES CLASSES(_id) ON DELETE CASCADE,
+    _subject_id INT REFERENCES SUBJECTS(_id) ON DELETE CASCADE,
+    _title VARCHAR(255) NOT NULL,
+    _description TEXT,
+    _due_date DATE NOT NULL DEFAULT CURRENT_DATE + INTERVAL '1 week'
 );
 
 CREATE TABLE ABSENCES (
-    id SERIAL PRIMARY KEY,
-    student_id INT REFERENCES USERS(id) ON DELETE CASCADE,
-    date DATE NOT NULL,
-    class_id INT REFERENCES CLASSES(id) ON DELETE CASCADE,
-    status VARCHAR(15) CHECK (status IN ('Justifiée', 'Injustifiée')) DEFAULT 'Injustifiée',
-    justification TEXT
+    _id SERIAL PRIMARY KEY,
+    _student_id INT REFERENCES USERS(_id) ON DELETE CASCADE,
+    _date DATE NOT NULL,
+    _class_id INT REFERENCES CLASSES(_id) ON DELETE CASCADE,
+    _status VARCHAR(15) CHECK (_status IN ('Justifiée', 'Injustifiée')) DEFAULT 'Injustifiée',
+    _justification TEXT
 );
 
 CREATE TABLE MESSAGES (
-    id SERIAL PRIMARY KEY,
-    sender_id INT REFERENCES USERS(id) ON DELETE CASCADE,
-    receiver_id INT REFERENCES USERS(id) ON DELETE CASCADE,
-    subject VARCHAR(255) NOT NULL,
-    content TEXT NOT NULL,
-    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    read BOOLEAN DEFAULT FALSE
+    _id SERIAL PRIMARY KEY,
+    _sender_id INT REFERENCES USERS(_id) ON DELETE CASCADE,
+    _receiver_id INT REFERENCES USERS(_id) ON DELETE CASCADE,
+    _subject VARCHAR(255) NOT NULL,
+    _content TEXT NOT NULL,
+    _sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    _read BOOLEAN DEFAULT FALSE
 );

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENT Sentiers - Page d'Accueil</title>
+    <title>ENT Sentiers - Mon Espace</title>
     <link rel="stylesheet" href="../css/myspace.css">
     <link rel="icon" href="../../../../resources/img/ENT_Logo.webp" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="banner">
@@ -17,19 +18,67 @@
     </div>
     <header>
         <nav>
-            <a class="home" href="/users_interfaces/pupils/frontend/html/home.html">Accueil</a>
-            <a class="messaging" href="/messaging">Messagerie</a>
-            <a class="myspace" href="/users_interfaces/pupils/frontend/html/myspace.html">Mon Espace</a>
-            <a class="profile" href="/profile">Profil</a>
-            <a class="about" href="/about">À propos</a>
+            <a class="home" href="home.html">Accueil</a>
+            <a class="messaging" href="messaging.html">Messagerie</a>
+            <a class="myspace" href="myspace.html">Mon Espace</a>
+            <a class="about" href="about.html">À propos</a>
         </nav>
     </header>
     <div class="main">
-        <div class="timetable">
+        <div class="myspace-content">
+            <!-- Left Section (Timetable and Grades) -->
+            <div class="left-section">
+                <!-- Timetable Section -->
+                <div class="timetable">
+                    <h2>Emploi du Temps</h2>
+                    <div class="timetable-day">
+                        <h3>Samedi</h3>
+                        <p>09:00 - 10:00 : Tarbiya Islamiya (Mme. NASRI)</p>
+                        <p>10:00 - 11:00 : Nourania (Mr. HADJI)</p>
+                    </div>
+                    <div class="timetable-day">
+                        <h3>Mardi (distanciel)</h3>
+                        <p>19:00 - 20:00 : Nourania (Mr. BEKKOUCH)</p>
+                    </div>
+                </div>
 
-        </div>
-        <div class="grades">
-            
+                <!-- Grades Section -->
+                <div class="grades">
+                    <h2>Notes et Observations</h2>
+                    <div class="class-section">
+                        <h3>Tarbiya Islamiya</h3>
+                        <p class="teacher">Mme. NASRI</p>
+                        <div class="grade-item">
+                            <span class="grade-label">Note :</span>
+                            <span class="grade-value">18/20</span>
+                            <span class="remark-label">Observation :</span>
+                            <span class="remark-value">Très bien, continuer ainsi !</span>
+                        </div>
+                    </div>
+                    <div class="class-section">
+                        <h3>Nourania</h3>
+                        <p class="teacher">Mr. HADJI</p>
+                        <div class="grade-item">
+                            <span class="grade-label">Note :</span>
+                            <span class="grade-value">16/20</span>
+                            <span class="remark-label">Observation :</span>
+                            <span class="remark-value">Bon travail, mais attention aux lettres similaires.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Section (Right Sidebar) -->
+            <div class="profile">
+                <h2>Profil</h2>
+                <img src="../../../../resources/img/pfps/pfp2.jpeg" alt="Profile Picture" class="profile-pic">
+                <p><strong>Nom :</strong> BRANECI</p>
+                <p><strong>Prénom :</strong> Lotfi</p>
+                <p><strong>Date de Naissance :</strong> 2010-02-08</p>
+                <p><strong>Email :</strong> lotfi.braneci@gmail.com</p>
+                <!-- Optional Phone Number (not displayed by default) -->
+                <!-- <p><strong>Téléphone :</strong> +33 6 12 34 56 78</p> -->
+            </div>
         </div>
     </div>
     <footer>

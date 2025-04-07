@@ -6,6 +6,7 @@
     <title>ENT Sentiers - Page d'Accueil</title>
     <link rel="stylesheet" href="../css/home.css">
     <link rel="icon" href="../../../../resources/img/ENT_Logo.webp" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="banner">
@@ -17,38 +18,60 @@
     </div>
     <header>
         <nav>
-            <a class="home" href="/users_interfaces/pupils/frontend/html/home.html">Accueil</a>
-            <a class="messaging" href="/messaging">Messagerie</a>
-            <a class="myspace" href="/users_interfaces/pupils/frontend/html/myspace.html">Mon Espace</a>
-            <a class="profile" href="/profile">Profil</a>
-            <a class="about" href="/about">À propos</a>
+            <a class="home" href="home.html">Accueil</a>
+            <a class="messaging" href="messaging.html">Messagerie</a>
+            <a class="myspace" href="myspace.html">Mon Espace</a>
+            <a class="about" href="about.html">À propos</a>
         </nav>
     </header>
     <div class="main">
-        <div class="news">
-            <h2>Actualités</h2>
-            <div class="news-items">
-                <p style="font-size: 3.5rem;">&lt</p>
-                <div class="news-item">
-                    <h3>Rentrée 2024-2025</h3>
-                    <img src="../../../../resources/img/news_rentree_24_25.png" alt="news_dummy">
-                </div>
-                <p style="font-size: 3.5rem;">&gt</p>
-            </div>
+        <!-- Welcome Section -->
+        <div class="welcome">
+            <h2>Bienvenue sur votre ENT</h2>
+            <p class="welcome-text">
+                Découvrez les dernières actualités, accédez à vos ressources éducatives et restez connecté avec notre communauté. 
+                <br>
+                Que votre apprentissage soit béni, إِنْ شَاءَ اللهُ.
+            </p>
         </div>
 
-        <div class="books">
-            <div class="nourania books-item">
-                <h2>Nourania</h2>
-                <a href="../../../../resources/pdf/Nourania.pdf" target="_blank">
-                    <img src="../../../../resources/img/Nourania_First_Page.jpg" alt="Nourania">
-                </a>
+        <!-- Content Wrapper for News, Separator, and Books -->
+        <div class="content-wrapper">
+            <!-- News Section -->
+            <div class="news">
+                <h2>Actualités</h2>
+                <div class="news-items">
+                    <span class="arrow left-arrow"><</span>
+                    <div class="news-item">
+                        <h3>Rentrée 2024-2025</h3>
+                        <img src="../../../../resources/img/news_rentree_24_25.png" alt="Rentrée 2024-2025">
+                    </div>
+                    <span class="arrow right-arrow">></span>
+                </div>
+                <div class="news-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
             </div>
-            <div class="quran books-item">
-                <h2>Quran</h2>
-                <a href="../../../../resources/pdf/Quran.pdf" target="_blank">
-                    <img src="../../../../resources/img/Quran_First_Page.webp" alt="Quran">
-                </a>
+
+            <!-- Separator -->
+            <div class="separator"></div>
+
+            <!-- Books Section -->
+            <div class="books">
+                <div class="books-item">
+                    <h2>Nourania</h2>
+                    <a href="../../../../resources/pdf/Nourania.pdf" target="_blank">
+                        <img src="../../../../resources/img/Nourania_First_Page.jpg" alt="Nourania">
+                    </a>
+                </div>
+                <div class="books-item">
+                    <h2>Quran</h2>
+                    <a href="../../../../resources/pdf/Quran.pdf" target="_blank">
+                        <img src="../../../../resources/img/Quran_First_Page.webp" alt="Quran">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
