@@ -113,7 +113,7 @@ nav a:hover {
     width: 80%;
     max-width: 900px;
     background: #f5e8c7;
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
     border-radius: 15px;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
     border: 2px solid rgba(193, 154, 107, 0.3);

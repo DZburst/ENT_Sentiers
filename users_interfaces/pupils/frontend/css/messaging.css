@@ -136,14 +136,13 @@ nav a:hover {
 }
 
 .compose-btn {
-    background: rgba(212, 175, 55, 0.1); /* Light gold for the compose button */
+    background: rgba(212, 175, 55, 0.1);
 }
 
 .compose-btn:hover {
     background: rgba(212, 175, 55, 0.2);
 }
 
-/* Messaging Content */
 .messaging-content {
     width: 95%;
     max-width: 1200px;
@@ -151,14 +150,14 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    height: 60vh; /* Fixed height to fit content */
+    height: 60vh;
 }
 
-/* Sidebar */
 .sidebar {
     width: 25%;
     background: #f5e8c7;
-    padding: 15px;
+    padding: 5px 15px;
+    margin: 0;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid rgba(193, 154, 107, 0.3);
@@ -168,7 +167,7 @@ nav a:hover {
     color: rgb(101, 67, 33);
     font-family: 'Scheherazade New', serif;
     font-size: 1.4rem;
-    margin-bottom: 15px;
+    margin: 0 auto 10px auto;
     text-align: center;
 }
 
