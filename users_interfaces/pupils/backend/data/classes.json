@@ -1,0 +1,57 @@
+[
+    {
+        "_id": 1,
+        "_subject_id": 1,
+        "_teacher_id": 1,
+        "_level": "Debutant",
+        "_classroom_id": 1,
+        "_start_time": "09:00",
+        "_end_time": "10:00",
+        "_day_of_week": "Samedi",
+        "_is_online": false
+    },
+    {
+        "_id": 2,
+        "_subject_id": 2,
+        "_teacher_id": 4,
+        "_level": "Intermediaire",
+        "_classroom_id": 2,
+        "_start_time": "14:00",
+        "_end_time": "15:00",
+        "_day_of_week": "Samedi",
+        "_is_online": false
+    },
+    {
+        "_id": 3,
+        "_subject_id": 3,
+        "_teacher_id": 5,
+        "_level": "Debutant",
+        "_classroom_id": 3,
+        "_start_time": "10:00",
+        "_end_time": "11:00",
+        "_day_of_week": "Dimanche",
+        "_is_online": false
+    },
+    {
+        "_id": 4,
+        "_subject_id": 5,
+        "_teacher_id": 3,
+        "_level": "Intermediaire",
+        "_classroom_id": 4,
+        "_start_time": "14:00",
+        "_end_time": "15:00",
+        "_day_of_week": "Dimanche",
+        "_is_online": false
+    },
+    {
+        "_id": 5,
+        "_subject_id": 4,
+        "_teacher_id": 2,
+        "_level": "Avance",
+        "_classroom_id": null,
+        "_start_time": "19:00",
+        "_end_time": "20:00",
+        "_day_of_week": "Mercredi",
+        "_is_online": true
+    }
+]

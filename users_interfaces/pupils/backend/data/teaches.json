@@ -1,0 +1,54 @@
+[
+    {
+        "_teacher_id": 1,
+        "_subject_id": 1
+    },
+    {
+        "_teacher_id": 1,
+        "_subject_id": 2
+    },
+    {
+        "_teacher_id": 1,
+        "_subject_id": 6
+    },
+    {
+        "_teacher_id": 2,
+        "_subject_id": 3
+    },
+    {
+        "_teacher_id": 2,
+        "_subject_id": 4
+    },
+    {
+        "_teacher_id": 3,
+        "_subject_id": 1
+    },
+    {
+        "_teacher_id": 3,
+        "_subject_id": 5
+    },
+    {
+        "_teacher_id": 4,
+        "_subject_id": 2
+    },
+    {
+        "_teacher_id": 4,
+        "_subject_id": 4
+    },
+    {
+        "_teacher_id": 4,
+        "_subject_id": 6
+    },
+    {
+        "_teacher_id": 5,
+        "_subject_id": 3
+    },
+    {
+        "_teacher_id": 5,
+        "_subject_id": 5
+    },
+    {
+        "_teacher_id": 5,
+        "_subject_id": 6
+    }
+]

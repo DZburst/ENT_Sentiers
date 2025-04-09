@@ -1,0 +1,26 @@
+[
+    {
+        "_id": 1,
+        "_name": "Quran"
+    },
+    {
+        "_id": 2,
+        "_name": "Tajwid"
+    },
+    {
+        "_id": 3,
+        "_name": "Nourania"
+    },
+    {
+        "_id": 4,
+        "_name": "Langue Arabe"
+    },
+    {
+        "_id": 5,
+        "_name": "Eveil a la Foi"
+    },
+    {
+        "_id": 6,
+        "_name": "Education Religieuse"
+    }
+]

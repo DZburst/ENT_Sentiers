@@ -10,7 +10,7 @@ CREATE TABLE USERS (
     _profile_pic TEXT,
     _email VARCHAR(100) UNIQUE,
     _phone VARCHAR(20) UNIQUE,
-    _role VARCHAR(20) CHECK (_role IN ('admin', 'teacher', 'student')),
+    _role VARCHAR(20) CHECK (_role IN ('admin', 'teacher', 'student', 'secretary')),
     _parent_name VARCHAR(50),
     _parent_email VARCHAR(100),
     _parent_phone VARCHAR(20),
@@ -25,23 +25,30 @@ CREATE TABLE CLASSROOMS (
 
 CREATE TABLE SUBJECTS (
     _id INTEGER PRIMARY KEY AUTOINCREMENT,
-    _name VARCHAR(50) NOT NULL,
-    _description TEXT,
-    _teacher_id INT,
-    FOREIGN KEY (_teacher_id) REFERENCES USERS(_id) ON DELETE CASCADE
+    _name VARCHAR(50) NOT NULL CHECK (_name IN ('Quran', 'Tajwid', 'Nourania', 'Langue Arabe', 'Eveil a la Foi', 'Education Religieuse')),
+    UNIQUE (_name)
+);
+
+CREATE TABLE TEACHES (
+    _teacher_id INT NOT NULL,
+    _subject_id INT NOT NULL,
+    PRIMARY KEY (_teacher_id, _subject_id),
+    FOREIGN KEY (_teacher_id) REFERENCES USERS(_id) ON DELETE CASCADE,
+    FOREIGN KEY (_subject_id) REFERENCES SUBJECTS(_id) ON DELETE CASCADE
 );
 
 CREATE TABLE CLASSES (
     _id INTEGER PRIMARY KEY AUTOINCREMENT,
     _subject_id INT,
-    _students TEXT NOT NULL,  -- Comma-separated string of student IDs (e.g., '8,9,10')
-    _level VARCHAR(15) CHECK (_level IN ('Débutant', 'Intermédiaire', 'Avancé', NULL)),
+    _teacher_id INT,
+    _level VARCHAR(15) CHECK (_level IN ('Debutant', 'Intermediaire', 'Avance', NULL)),
     _classroom_id INT,
     _start_time TIME NOT NULL,
     _end_time TIME NOT NULL,
     _day_of_week VARCHAR(10) CHECK (_day_of_week IN ('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche')),
     _is_online BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (_subject_id) REFERENCES SUBJECTS(_id) ON DELETE CASCADE,
+    FOREIGN KEY (_teacher_id) REFERENCES USERS(_id) ON DELETE CASCADE,
     FOREIGN KEY (_classroom_id) REFERENCES CLASSROOMS(_id) ON DELETE CASCADE
 );
 
@@ -79,20 +86,27 @@ CREATE TABLE REMARKS (
 CREATE TABLE HOMEWORKS (
     _id INTEGER PRIMARY KEY AUTOINCREMENT,
     _class_id INT,
-    _description TEXT,
+    _description TEXT NOT NULL,
+    _issued_at DATE NOT NULL,
     FOREIGN KEY (_class_id) REFERENCES CLASSES(_id) ON DELETE CASCADE
 );
 
 CREATE TABLE MAILS (
     _id INTEGER PRIMARY KEY AUTOINCREMENT,
     _sender_id INT,
-    _receiver_id INT,
     _subject VARCHAR(255) NOT NULL,
     _content TEXT NOT NULL,
     _sent_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     _is_read BOOLEAN DEFAULT FALSE,
-    _folder VARCHAR(20) CHECK (_folder IN ('Boîte de Réception', 'Envoyés', 'Brouillons', 'Corbeille', 'Favoris')) DEFAULT 'Boîte de Réception',
-    FOREIGN KEY (_sender_id) REFERENCES USERS(_id) ON DELETE CASCADE,
+    _folder VARCHAR(20) CHECK (_folder IN ('Boite de Reception', 'Envoyes', 'Brouillons', 'Corbeille', 'Favoris')) DEFAULT 'Boite de Reception',
+    FOREIGN KEY (_sender_id) REFERENCES USERS(_id) ON DELETE CASCADE
+);
+
+CREATE TABLE MAIL_RECIPIENTS (
+    _id INTEGER PRIMARY KEY AUTOINCREMENT,
+    _mail_id INT NOT NULL,
+    _receiver_id INT NOT NULL,
+    FOREIGN KEY (_mail_id) REFERENCES MAILS(_id) ON DELETE CASCADE,
     FOREIGN KEY (_receiver_id) REFERENCES USERS(_id) ON DELETE CASCADE
 );
 

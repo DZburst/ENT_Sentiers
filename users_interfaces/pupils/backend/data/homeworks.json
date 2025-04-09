@@ -1,0 +1,62 @@
+[
+    {
+        "_id": 1,
+        "_class_id": 1,
+        "_description": "Relire et mémoriser les versets 1 à 7 de la Sourate Al-Fatiha avec une bonne prononciation.",
+        "_issued_at": "2025-03-29"
+    },
+    {
+        "_id": 2,
+        "_class_id": 1,
+        "_description": "Mémoriser et réciter la Sourate Al-Ikhlas en appliquant les règles de Tajwid apprises.",
+        "_issued_at": "2025-04-05"
+    },
+    {
+        "_id": 3,
+        "_class_id": 2,
+        "_description": "Identifier et pratiquer l'Idgham dans les versets 1 à 5 de la Sourate Al-Kawthar.",
+        "_issued_at": "2025-03-29"
+    },
+    {
+        "_id": 4,
+        "_class_id": 2,
+        "_description": "Travailler le Qalqalah sur les lettres ق, ط, ب, ج, د dans des exemples tirés de la Sourate An-Nas.",
+        "_issued_at": "2025-04-05"
+    },
+    {
+        "_id": 5,
+        "_class_id": 3,
+        "_description": "Revoir la Leçon 5 du livre Nourania et pratiquer la prononciation des lettres 'ع' et 'ح'.",
+        "_issued_at": "2025-03-30"
+    },
+    {
+        "_id": 6,
+        "_class_id": 3,
+        "_description": "Réviser la leçon 10 du livre Nourania.",
+        "_issued_at": "2025-04-06"
+    },
+    {
+        "_id": 7,
+        "_class_id": 4,
+        "_description": "Lire l'histoire du Prophète Ibrahim (AS) et répondre aux questions sur ses qualités.",
+        "_issued_at": "2025-03-30"
+    },
+    {
+        "_id": 8,
+        "_class_id": 4,
+        "_description": "Réviser les 5 piliers de l'Islam et écrire une courte phrase sur l'importance de chacun.",
+        "_issued_at": "2025-04-06"
+    },
+    {
+        "_id": 9,
+        "_class_id": 5,
+        "_description": "Apprendre 10 mots de vocabulaire sur la famille en arabe et écrire une phrase avec chacun.",
+        "_issued_at": "2025-03-26"
+    },
+    {
+        "_id": 10,
+        "_class_id": 5,
+        "_description": "Conjuguer le verbe 'écrire' (كتب) au présent pour tous les pronoms personnels.",
+        "_issued_at": "2025-04-02"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "_name": "Salle 1",
+        "_nb_seats": 14
+    },
+    {
+        "_name": "Salle 2",
+        "_nb_seats": 12
+    },
+    {
+        "_name": "Salle 3",
+        "_nb_seats": 10
+    },
+    {
+        "_name": "Salle 4",
+        "_nb_seats": 13
+    },
+    {
+        "_name": "Salle 5",
+        "_nb_seats": 13
+    },
+    {
+        "_name": "Salle 6",
+        "_nb_seats": 12
+    }
+]

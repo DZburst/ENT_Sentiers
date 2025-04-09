@@ -1,0 +1,402 @@
+[
+    {
+        "_id": 1,
+        "_student_id": 6,
+        "_subject_id": 1,
+        "_grade": 15.0,
+        "_date": "2025-02-22",
+        "_comment": null
+    },
+    {
+        "_id": 2,
+        "_student_id": 6,
+        "_subject_id": 1,
+        "_grade": 16.5,
+        "_date": "2025-03-15",
+        "_comment": null
+    },
+    {
+        "_id": 3,
+        "_student_id": 6,
+        "_subject_id": 2,
+        "_grade": 14.0,
+        "_date": "2025-03-01",
+        "_comment": "Bon travail dans l'ensemble."
+    },
+    {
+        "_id": 4,
+        "_student_id": 7,
+        "_subject_id": 1,
+        "_grade": 12.5,
+        "_date": "2025-03-08",
+        "_comment": null
+    },
+    {
+        "_id": 5,
+        "_student_id": 7,
+        "_subject_id": 1,
+        "_grade": 13.0,
+        "_date": "2025-03-29",
+        "_comment": null
+    },
+    {
+        "_id": 6,
+        "_student_id": 7,
+        "_subject_id": 3,
+        "_grade": 15.5,
+        "_date": "2025-02-23",
+        "_comment": "Bon ensemble sur la Leçon 3, mais attention aux lettres similaires."
+    },
+    {
+        "_id": 7,
+        "_student_id": 8,
+        "_subject_id": 1,
+        "_grade": 16.0,
+        "_date": "2025-02-22",
+        "_comment": null
+    },
+    {
+        "_id": 8,
+        "_student_id": 8,
+        "_subject_id": 5,
+        "_grade": 14.5,
+        "_date": "2025-03-02",
+        "_comment": null
+    },
+    {
+        "_id": 9,
+        "_student_id": 9,
+        "_subject_id": 1,
+        "_grade": 17.0,
+        "_date": "2025-03-15",
+        "_comment": null
+    },
+    {
+        "_id": 10,
+        "_student_id": 9,
+        "_subject_id": 4,
+        "_grade": 15.0,
+        "_date": "2025-02-19",
+        "_comment": null
+    },
+    {
+        "_id": 11,
+        "_student_id": 10,
+        "_subject_id": 2,
+        "_grade": 13.5,
+        "_date": "2025-02-22",
+        "_comment": "Des progrès, mais attention à la prononciation de la lettre 'ق'."
+    },
+    {
+        "_id": 12,
+        "_student_id": 10,
+        "_subject_id": 2,
+        "_grade": 14.0,
+        "_date": "2025-03-15",
+        "_comment": "Maîtrise satisfaisante des caractéristiques, mais un travai plus poussé est nécessaire afin de progresser davantage encore."
+    },
+    {
+        "_id": 13,
+        "_student_id": 10,
+        "_subject_id": 3,
+        "_grade": 12.0,
+        "_date": "2025-03-02",
+        "_comment": "Il faut revoir les leçons du début, car les bases semblent s'effacer..."
+    },
+    {
+        "_id": 14,
+        "_student_id": 11,
+        "_subject_id": 2,
+        "_grade": 16.5,
+        "_date": "2025-03-01",
+        "_comment": "Très bon travail, mais attention à ne pas se perdre entre les lettres similaires."
+    },
+    {
+        "_id": 15,
+        "_student_id": 11,
+        "_subject_id": 2,
+        "_grade": 17.0,
+        "_date": "2025-03-29",
+        "_comment": "Très bonne maîtrise de l'ensemble des règles, continuer ainsi !"
+    },
+    {
+        "_id": 16,
+        "_student_id": 11,
+        "_subject_id": 5,
+        "_grade": 15.0,
+        "_date": "2025-02-16",
+        "_comment": null
+    },
+    {
+        "_id": 17,
+        "_student_id": 12,
+        "_subject_id": 2,
+        "_grade": 14.0,
+        "_date": "2025-03-08",
+        "_comment": "Bon travail dans l'ensemble, mais s'appliquer un peu plus encore pour progresser plus vite."
+    },
+    {
+        "_id": 18,
+        "_student_id": 12,
+        "_subject_id": 4,
+        "_grade": 13.5,
+        "_date": "2025-03-05",
+        "_comment": null
+    },
+    {
+        "_id": 19,
+        "_student_id": 13,
+        "_subject_id": 3,
+        "_grade": 17.5,
+        "_date": "2025-02-23",
+        "_comment": "Excellent travail sur les Leçons 4 à 8."
+    },
+    {
+        "_id": 20,
+        "_student_id": 13,
+        "_subject_id": 3,
+        "_grade": 15.5,
+        "_date": "2025-03-16",
+        "_comment": "Progrès dans la Leçon 9, mais la prononciation de la lettre 'ق' nécessite plus de pratique."
+    },
+    {
+        "_id": 21,
+        "_student_id": 13,
+        "_subject_id": 5,
+        "_grade": 14.0,
+        "_date": "2025-03-02",
+        "_comment": null
+    },
+    {
+        "_id": 22,
+        "_student_id": 14,
+        "_subject_id": 3,
+        "_grade": 15.0,
+        "_date": "2025-03-09",
+        "_comment": "Bon progrès dans la Leçon 11, mais travaille sur la prononciation de la lettre 'خ' encore un peu."
+    },
+    {
+        "_id": 23,
+        "_student_id": 14,
+        "_subject_id": 3,
+        "_grade": 18.0,
+        "_date": "2025-03-30",
+        "_comment": "Excellent travail sur la Leçon 15."
+    },
+    {
+        "_id": 24,
+        "_student_id": 14,
+        "_subject_id": 4,
+        "_grade": 14.5,
+        "_date": "2025-02-26",
+        "_comment": null
+    },
+    {
+        "_id": 25,
+        "_student_id": 15,
+        "_subject_id": 5,
+        "_grade": 13.0,
+        "_date": "2025-02-16",
+        "_comment": null
+    },
+    {
+        "_id": 26,
+        "_student_id": 15,
+        "_subject_id": 5,
+        "_grade": 14.0,
+        "_date": "2025-03-23",
+        "_comment": null
+    },
+    {
+        "_id": 27,
+        "_student_id": 15,
+        "_subject_id": 4,
+        "_grade": 15.5,
+        "_date": "2025-03-12",
+        "_comment": null
+    },
+    {
+        "_id": 28,
+        "_student_id": 16,
+        "_subject_id": 5,
+        "_grade": 16.5,
+        "_date": "2025-03-02",
+        "_comment": null
+    },
+    {
+        "_id": 29,
+        "_student_id": 16,
+        "_subject_id": 5,
+        "_grade": 17.0,
+        "_date": "2025-03-30",
+        "_comment": null
+    },
+    {
+        "_id": 30,
+        "_student_id": 16,
+        "_subject_id": 1,
+        "_grade": 14.0,
+        "_date": "2025-03-01",
+        "_comment": null
+    },
+    {
+        "_id": 31,
+        "_student_id": 17,
+        "_subject_id": 5,
+        "_grade": 15.0,
+        "_date": "2025-02-19",
+        "_comment": null
+    },
+    {
+        "_id": 32,
+        "_student_id": 17,
+        "_subject_id": 5,
+        "_grade": 16.0,
+        "_date": "2025-03-19",
+        "_comment": null
+    },
+    {
+        "_id": 33,
+        "_student_id": 17,
+        "_subject_id": 2,
+        "_grade": 14.5,
+        "_date": "2025-03-08",
+        "_comment": "Attention à la maîtrise du Point de Sortie de la lettre 'ظ', qui doit être amélioré."
+    },
+    {
+        "_id": 34,
+        "_student_id": 18,
+        "_subject_id": 5,
+        "_grade": 13.5,
+        "_date": "2025-03-05",
+        "_comment": null
+    },
+    {
+        "_id": 35,
+        "_student_id": 18,
+        "_subject_id": 5,
+        "_grade": 14.0,
+        "_date": "2025-03-26",
+        "_comment": null
+    },
+    {
+        "_id": 36,
+        "_student_id": 18,
+        "_subject_id": 3,
+        "_grade": 15.0,
+        "_date": "2025-02-16",
+        "_comment": "Des progrès, c'est très bien."
+    },
+    {
+        "_id": 37,
+        "_student_id": 19,
+        "_subject_id": 5,
+        "_grade": 16.0,
+        "_date": "2025-02-26",
+        "_comment": null
+    },
+    {
+        "_id": 38,
+        "_student_id": 19,
+        "_subject_id": 5,
+        "_grade": 17.0,
+        "_date": "2025-03-19",
+        "_comment": null
+    },
+    {
+        "_id": 39,
+        "_student_id": 19,
+        "_subject_id": 4,
+        "_grade": 14.5,
+        "_date": "2025-03-12",
+        "_comment": null
+    },
+    {
+        "_id": 40,
+        "_student_id": 20,
+        "_subject_id": 1,
+        "_grade": 15.5,
+        "_date": "2025-03-08",
+        "_comment": null
+    },
+    {
+        "_id": 41,
+        "_student_id": 20,
+        "_subject_id": 2,
+        "_grade": 14.0,
+        "_date": "2025-02-22",
+        "_comment": "Bonne application du Madd, mais travaille sur le Point de Sortie de la lettre 'س'."
+    },
+    {
+        "_id": 42,
+        "_student_id": 21,
+        "_subject_id": 1,
+        "_grade": 16.0,
+        "_date": "2025-03-15",
+        "_comment": null
+    },
+    {
+        "_id": 43,
+        "_student_id": 21,
+        "_subject_id": 3,
+        "_grade": 15.0,
+        "_date": "2025-03-02",
+        "_comment": "Bon travail, mais attention à la Leçon 9."
+    },
+    {
+        "_id": 44,
+        "_student_id": 22,
+        "_subject_id": 2,
+        "_grade": 14.5,
+        "_date": "2025-03-01",
+        "_comment": "Bonne maîtrise globale des caractéristiques des lettres, mais attention à ne pas se précipiter et oublier des bouts de mots."
+    },
+    {
+        "_id": 45,
+        "_student_id": 22,
+        "_subject_id": 5,
+        "_grade": 13.5,
+        "_date": "2025-02-16",
+        "_comment": null
+    },
+    {
+        "_id": 46,
+        "_student_id": 23,
+        "_subject_id": 2,
+        "_grade": 15.0,
+        "_date": "2025-03-15",
+        "_comment": "Bon travail, mais faire attention à l'application de la Ghunnah."
+    },
+    {
+        "_id": 47,
+        "_student_id": 23,
+        "_subject_id": 5,
+        "_grade": 16.0,
+        "_date": "2025-03-05",
+        "_comment": null
+    },
+    {
+        "_id": 48,
+        "_student_id": 24,
+        "_subject_id": 3,
+        "_grade": 14.0,
+        "_date": "2025-02-23",
+        "_comment": "Bon travail sur la Leçon 6, mais concentre-toi sur la prononciation des lettres difficiles."
+    },
+    {
+        "_id": 49,
+        "_student_id": 24,
+        "_subject_id": 5,
+        "_grade": 15.5,
+        "_date": "2025-03-09",
+        "_comment": null
+    },
+    {
+        "_id": 50,
+        "_student_id": 25,
+        "_subject_id": 3,
+        "_grade": 16.5,
+        "_date": "2025-03-16",
+        "_comment": "Excellents progrès dans la Leçon 10, mais la prononciation des lettres de la gorge doit être plus claire."
+    }
+]
