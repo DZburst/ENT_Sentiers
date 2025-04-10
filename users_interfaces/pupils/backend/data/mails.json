@@ -1,0 +1,72 @@
+[
+    {
+        "_id": 1,
+        "_sender_id": 26,
+        "_subject": "Annonce : Journée portes ouvertes",
+        "_content": "Chers parents, nous organisons une journée portes ouvertes le 15 avril 2025. Venez découvrir les activités de vos enfants !",
+        "_sent_at": "2025-05-01"
+    },
+    {
+        "_id": 2,
+        "_sender_id": 26,
+        "_subject": "Rappel : Cours de Quran ce samedi",
+        "_content": "Bonjour à tous, un rappel pour le cours de Quran ce samedi à 9h. Assurez-vous d'avoir révisé la Sourate Al-Fatiha.",
+        "_sent_at": "2025-04-03"
+    },
+    {
+        "_id": 3,
+        "_sender_id": 26,
+        "_subject": "Mise à jour : Cours de Nourania",
+        "_content": "Chers élèves, le cours de Nourania de ce dimanche portera sur la Leçon 10. Veuillez préparer les exercices correspondants.",
+        "_sent_at": "2025-04-04"
+    },
+    {
+        "_id": 4,
+        "_sender_id": 26,
+        "_subject": "Rappel : Paiement des frais de scolarité",
+        "_content": "Chers parents, merci de régler les frais de scolarité avant le 10 avril 2025. Contactez-nous en cas de questions.",
+        "_sent_at": "2025-03-30"
+    },
+    {
+        "_id": 5,
+        "_sender_id": 26,
+        "_subject": "Devoirs de Tajwid",
+        "_content": "Bonjour, un rappel pour les devoirs de Tajwid à rendre ce samedi. Pratiquez l'Idgham et le Qalqalah comme vu en classe.",
+        "_sent_at": "2025-04-02"
+    },
+    {
+        "_id": 6,
+        "_sender_id": 1,
+        "_subject": "Mise à jour sur votre enfant",
+        "_content": "Bonjour, je voulais vous informer que votre enfant progresse bien en Quran, mais doit travailler davantage sa concentration.",
+        "_sent_at": "2025-03-15"
+    },
+    {
+        "_id": 7,
+        "_sender_id": 2,
+        "_subject": "Progrès de votre enfant",
+        "_content": "Bonjour, votre enfant a des difficultés en Tajwid. Je recommande plus de pratique à la maison pour améliorer ses résultats.",
+        "_sent_at": "2025-03-20"
+    },
+    {
+        "_id": 8,
+        "_sender_id": 26,
+        "_subject": "Événement : Éveil à la Foi",
+        "_content": "Chers élèves, nous organisons un événement spécial pour le cours d'Éveil à la Foi ce dimanche. Venez nombreux !",
+        "_sent_at": "2025-04-05"
+    },
+    {
+        "_id": 9,
+        "_sender_id": 26,
+        "_subject": "Devoir de Langue Arabe",
+        "_content": "Bonjour, un nouveau devoir de Langue Arabe est à rendre pour mercredi prochain. Travaillez sur le vocabulaire de la famille.",
+        "_sent_at": "2025-04-06"
+    },
+    {
+        "_id": 10,
+        "_sender_id": 5,
+        "_subject": "Question concernant mon enfant",
+        "_content": "Bonjour, je voulais savoir comment mon enfant progresse en Nourania. Peut-on organiser une rencontre ?",
+        "_sent_at": "2025-03-25"
+    }
+]

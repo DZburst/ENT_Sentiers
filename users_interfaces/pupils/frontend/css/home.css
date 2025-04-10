@@ -11,7 +11,7 @@ body {
 
 .banner {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(46, 85, 59, 1.0)),
-                      url("../../../../resources/img/Home_banner_background.png");
+                      url("../../../../resources/img/site/Banner1.png");
     display: flex;
     flex-direction: row;
     height: 20vh;
@@ -104,12 +104,12 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 5%; /* Further reduced padding */
+    padding: 20px 5%; 
     background: #faf3e0;
-    gap: 15px; /* Reduced gap */
+    gap: 15px; 
 }
 
-/* Welcome Section */
+
 .welcome {
     width: 80%;
     max-width: 1100px;
@@ -149,15 +149,15 @@ nav a:hover {
     max-width: 1100px;
     display: flex;
     flex-direction: row;
-    align-items: stretch; /* Ensure sections stretch to the same height */
+    align-items: stretch; 
     gap: 10px;
 }
 
-/* News Section */
+
 .news {
     width: 40%;
     background: #f5e8c7;
-    padding: 10px; /* Reduced padding */
+    padding: 10px; 
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid rgba(193, 154, 107, 0.3);
@@ -173,25 +173,34 @@ nav a:hover {
 .news h2 {
     color: rgb(101, 67, 33);
     font-family: 'Scheherazade New', serif;
-    font-size: 1.4rem; /* Reduced font size */
-    margin-bottom: 8px;
+    font-size: 1.4rem; 
+    margin: 0 auto 8px auto;
+    text-decoration: underline;
 }
 
 .news-items {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px; /* Reduced gap */
+    gap: 8px; 
 }
 
 .arrow {
-    font-size: 1.2rem; /* Further reduced arrow size */
+    font-size: 1.2rem;
     color: rgb(101, 67, 33);
     background: rgba(193, 154, 107, 0.2);
-    padding: 6px; /* Reduced padding */
-    border-radius: 50%;
+    margin: 0 2px;
+    border-radius: 25%;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.right-arrow{
+    padding: 6px 4px 6px 6px;
+}
+
+.left-arrow{
+    padding: 6px 6px 4px 6px;
 }
 
 .arrow:hover {
@@ -201,12 +210,13 @@ nav a:hover {
 
 .news-item {
     max-width: 100%;
+    margin: 0 5px;
 }
 
 .news-item h3 {
     color: rgb(101, 67, 33);
-    font-size: 1rem; /* Reduced font size */
-    margin: 6px 0; /* Reduced margin */
+    font-size: 1rem; 
+    margin: 6px 0; 
 }
 
 .news-item img {
@@ -218,18 +228,18 @@ nav a:hover {
 }
 
 .news-item img:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .news-indicators {
     display: flex;
     justify-content: center;
-    gap: 6px; /* Reduced gap */
-    margin-top: 8px; /* Reduced margin */
+    gap: 6px; 
+    margin-top: 8px; 
 }
 
 .indicator {
-    width: 6px; /* Reduced size */
+    width: 6px; 
     height: 6px;
     background: rgba(101, 67, 33, 0.3);
     border-radius: 50%;
@@ -240,25 +250,25 @@ nav a:hover {
     background: rgb(101, 67, 33);
 }
 
-/* Separator */
+
 .separator {
-    width: 1px; /* Thin separator */
-    background: rgba(193, 154, 107, 0.3); /* Faint brown color */
-    margin: 0 10px; /* Small margin on either side */
+    width: 1px; 
+    background: rgba(193, 154, 107, 0.3); 
+    margin: 0 10px; 
 }
 
-/* Books Section */
+
 .books {
     width: 60%;
     display: flex;
-    flex-direction: row; /* Horizontal layout for books */
-    gap: 10px; /* Reduced gap */
+    flex-direction: row; 
+    gap: 10px; 
 }
 
 .books-item {
-    width: 50%; /* Each book takes half the width */
+    width: 50%; 
     background: #f5e8c7;
-    padding: 10px; /* Reduced padding */
+    padding: 10px; 
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid rgba(193, 154, 107, 0.3);
@@ -274,8 +284,9 @@ nav a:hover {
 .books-item h2 {
     color: rgb(101, 67, 33);
     font-family: 'Scheherazade New', serif;
-    font-size: 1.2rem; /* Reduced font size */
-    margin: 6px 0; /* Reduced margin */
+    font-size: 1.4rem;
+    margin: 0 auto 8px auto;
+    text-decoration: underline;
 }
 
 .books-item img {
@@ -298,7 +309,7 @@ nav a:hover {
 
     .content-wrapper {
         flex-direction: column;
-        gap: 15px; /* Adjusted gap for vertical layout */
+        gap: 15px; 
     }
 
     .news, .books {
@@ -306,16 +317,16 @@ nav a:hover {
     }
 
     .separator {
-        display: none; /* Hide separator in vertical layout */
+        display: none; 
     }
 
     .books {
-        flex-direction: row; /* Keep books side by side */
+        flex-direction: row; 
         gap: 15px;
     }
 
     .books-item {
-        width: 48%; /* Two items side by side */
+        width: 48%; 
     }
 }
 
@@ -342,7 +353,7 @@ nav a:hover {
     }
 
     .books {
-        flex-direction: column; /* Stack books vertically on small screens */
+        flex-direction: column; 
         gap: 10px;
     }
 

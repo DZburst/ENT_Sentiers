@@ -11,7 +11,7 @@ body {
 
 .banner {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(46, 85, 59, 1.0)),
-                      url("../../../../resources/img/Home_banner_background.png");
+                      url("../../../../resources/img/site/Banner1.png");
     display: flex;
     flex-direction: row;
     height: 20vh;
@@ -135,7 +135,7 @@ nav a:hover {
 }
 
 .about-text {
-    font-family: 'Scheherazade New', serif; /* Arabian-like font */
+    font-family: 'Scheherazade New', serif; 
     color: #333;
     font-size: 1.1rem;
     line-height: 1.6;

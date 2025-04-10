@@ -93,17 +93,17 @@ CREATE TABLE HOMEWORKS (
 
 CREATE TABLE MAILS (
     _id INTEGER PRIMARY KEY AUTOINCREMENT,
-    _sender_id INT,
     _subject VARCHAR(255) NOT NULL,
     _content TEXT NOT NULL,
     _sent_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    _is_read BOOLEAN DEFAULT FALSE,
-    _folder VARCHAR(20) CHECK (_folder IN ('Boite de Reception', 'Envoyes', 'Brouillons', 'Corbeille', 'Favoris')) DEFAULT 'Boite de Reception',
+    _sender_id INT,
     FOREIGN KEY (_sender_id) REFERENCES USERS(_id) ON DELETE CASCADE
 );
 
 CREATE TABLE MAIL_RECIPIENTS (
     _id INTEGER PRIMARY KEY AUTOINCREMENT,
+    _is_read BOOLEAN DEFAULT FALSE,
+    _folder VARCHAR(20) CHECK (_folder IN ('Boite de Reception', 'Envoyes', 'Brouillons', 'Corbeille', 'Favoris')) DEFAULT 'Boite de Reception',
     _mail_id INT NOT NULL,
     _receiver_id INT NOT NULL,
     FOREIGN KEY (_mail_id) REFERENCES MAILS(_id) ON DELETE CASCADE,

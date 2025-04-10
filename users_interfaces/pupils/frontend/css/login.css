@@ -1,6 +1,6 @@
 body {
     background-color: rgba(69, 125, 88, 1.0);
-    background-image: url("../../../../resources/img/Login_Background.png");
+    background-image: url("../../../../resources/img/site/Login_Background.png");
     font-family: Arial, sans-serif;
     line-height: 1.0;
     margin: 0;
@@ -40,8 +40,8 @@ form {
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(40, 40, 40, 0.80); /* Soft yellow light */
-    transition: box-shadow 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0 0 15px rgba(40, 40, 40, 0.80); 
+    transition: box-shadow 0.3s ease; 
 }
 
 .welcome_msg {
@@ -86,7 +86,7 @@ button:hover {
 .roles-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Wrap options for smaller screens */
+    flex-wrap: wrap; 
 }
 
 .role-option {
