@@ -1,1 +1,4 @@
-resources/pdf/Quran.pdf
+users_interfaces/frontend/resources/pdf/Quran.pdf
+users_interfaces/backend/.env
+users_interfaces/backend/school.db
+users_interfaces/backend/plain_dummy_passwords.txt

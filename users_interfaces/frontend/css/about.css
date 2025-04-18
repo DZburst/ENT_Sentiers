@@ -1,0 +1,218 @@
+body {
+    background-color: #faf3e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*-----------------------------------*/
+
+.banner {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(46, 85, 59, 1.0)),
+                      url("../resources/img/site/Banner1.png");
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #222222;
+    font-size: 2em;
+    margin : 0 10px 0 5px;
+}
+
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 85%;
+    aspect-ratio: auto;
+    border-radius: 10%;
+    margin : 0 5px 0 10px;
+}
+
+blockquote {
+    font-size: 0.9rem;
+    font-family: 'Amiri', serif;
+    text-align: right;
+    background: linear-gradient(135deg, #faf3e0, #f0e0c0);
+    color: rgb(101, 67, 33);
+    padding: 5px;
+    border-radius: 8px;
+    border-right: 8px solid rgb(193, 154, 107);
+    max-width: 40vw;
+    max-height: 18vh;
+    align-items: center;
+  }
+  
+
+/*-----------------------------------*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(69, 125, 88, 1.0), rgba(46, 85, 59, 1.0)),
+                radial-gradient(circle, rgba(69, 125, 88, 1.0), rgba(46, 85, 59, 1.0));
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #faf3e0;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0 5px;
+}
+
+nav a.home {
+    margin-right: auto;
+}
+
+nav a:not(.about) {
+    background-color: rgba(193, 154, 107, 0.4);
+    border: 2px solid rgba(193, 154, 107, 0.6);
+}
+
+nav a:hover {
+    background-color: rgba(193, 154, 107, 0.2);
+    color: #fff;
+}
+
+/*-----------------------------------*/
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 5%;
+    background: #faf3e0;
+}
+
+.description {
+    width: 80%;
+    max-width: 900px;
+    background: #f5e8c7;
+    padding: 10px 30px 30px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(193, 154, 107, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.description:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.description h2 {
+    color: rgb(101, 67, 33);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(193, 154, 107, 0.5);
+    padding-bottom: 10px;
+}
+
+.about-text {
+    font-family: 'Scheherazade New', serif; 
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.duaa-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.duaa-label {
+    color: rgb(101, 67, 33);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.duaa-section {
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    color: rgb(101, 67, 33);
+    background: rgba(212, 175, 55, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-right: 5px solid #d4af37;
+}
+
+.duaa-translation {
+    font-style: italic;
+    color: #555;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.contact {
+    background: rgba(46, 85, 59, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-heading {
+    color: rgb(101, 67, 33);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    color: #333;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.contact a {
+    color: #d4af37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: rgb(101, 67, 33);
+    text-decoration: underline;
+}
+
+/*-----------------------------------*/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(69, 125, 88, 1.0), rgba(46, 85, 59, 1.0)),
+                radial-gradient(circle, rgba(69, 125, 88, 1.0), rgba(46, 85, 59, 1.0));
+    color: #222;
+    font-weight: bold;
+}

@@ -1,0 +1,300 @@
+body {
+    background-color: #faf3e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*----------------- Banner ------------------*/
+
+.banner {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(46, 85, 59, 1.0)),
+                      url("../resources/img/site/Banner1.png");
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #222222;
+    font-size: 2em;
+    margin : 0 10px 0 5px;
+}
+
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 85%;
+    aspect-ratio: auto;
+    border-radius: 10%;
+    margin : 0 5px 0 10px;
+}
+
+blockquote {
+    font-size: 0.9rem;
+    font-family: 'Amiri', serif;
+    text-align: right;
+    background: linear-gradient(135deg, #faf3e0, #f0e0c0);
+    color: rgb(101, 67, 33);
+    padding: 5px;
+    border-radius: 8px;
+    border-right: 8px solid rgb(193, 154, 107);
+    max-width: 40vw;
+    max-height: 18vh;
+    align-items: center;
+  }
+
+/*----------------- Header ------------------*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(69, 125, 88, 1.0), rgba(46, 85, 59, 1.0)),
+                radial-gradient(circle, rgba(69, 125, 88, 1.0), rgba(46, 85, 59, 1.0));
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #faf3e0;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0 5px;
+}
+
+nav a.home {
+    margin-right: auto;
+}
+
+nav a:not(.myspace) {
+    background-color: rgba(193, 154, 107, 0.4);
+    border: 2px solid rgba(193, 154, 107, 0.6);
+}
+
+nav a:hover {
+    background-color: rgba(193, 154, 107, 0.2);
+    color: #fff;
+}
+
+/*----------------- Main Section ------------------*/
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 5%;
+    background: #faf3e0;
+}
+
+.myspace-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.timetable {
+    width: 25%;
+    background: #f5e8c7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(193, 154, 107, 0.3);
+    text-align: center;
+}
+
+.class-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(203, 164, 81, 0.2);
+    border-radius: 6px;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+.timetable-day {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #333;
+    font-size: 0.9rem;
+    margin: 4px 0;
+}
+
+.grades-homework {
+    width: 50%;
+    background: #f5e8c7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(193, 154, 107, 0.3);
+    text-align: center;
+}
+
+.class-section {
+    margin-bottom: 15px;
+}
+
+.class-section .teacher {
+    color: #555;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.grade-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 8px;
+    background: rgba(193, 154, 107, 0.2);
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.remark-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 8px;
+    background: rgba(203, 164, 81, 0.2);
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.grade-label, .remark-label, .homework-label {
+    color: rgb(101, 67, 33);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.grade-value, .remark-value, .homework-value {
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.homework-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 8px;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 6px;
+}
+
+.separator {
+    height: 1px;
+    background: rgba(193, 154, 107, 0.3);
+    margin: 15px 0;
+}
+
+.profile {
+    width: 25%;
+    background: #f5e8c7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(193, 154, 107, 0.3);
+    text-align: center;
+}
+
+.profile *:not(h2) {
+    line-height: 1.5rem;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(193, 154, 107, 0.3);
+    margin: 10px auto;
+}
+
+h2 {
+    color: rgb(101, 67, 33);
+    font-family: 'Scheherazade New', serif;
+    font-size: 1.8rem;
+    text-decoration: underline;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h3 {
+    color: rgb(101, 67, 33);
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .myspace-content {
+        flex-direction: column;
+    }
+
+    .timetable, .grades-homework, .profile {
+        width: 100%;
+    }
+
+    .grades-homework, .profile {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p, .class-section .teacher, .grade-label, .grade-value, .remark-label, .remark-value, .homework-label, .homework-value {
+        font-size: 0.85rem;
+    }
+
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/*----------------- Footer ------------------*/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(69, 125, 88, 1.0), rgba(46, 85, 59, 1.0)),
+                radial-gradient(circle, rgba(69, 125, 88, 1.0), rgba(46, 85, 59, 1.0));
+    color: #222;
+    font-weight: bold;
+}
+
+/*-----------------------------------*/
