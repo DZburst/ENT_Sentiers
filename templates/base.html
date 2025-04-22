@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ENT Sentiers{% endblock %}</title>
+    <link rel="icon" href="/static/resources/img/site/ENT_Logo.webp" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <div class="banner">
+        <span class="logo-container">
+            <img class="logo" src="/static/resources/img/site/Logo_ESL.jpg" alt="Logo ENT Sentiers">
+            <h1>ENT Les Sentiers de la Lumière</h1>
+        </span>
+        <blockquote lang="fr" id="quote-block">
+            {% block quote %}
+                <!-- Quote will be injected here -->
+            {% endblock %}
+        </blockquote>
+    </div>
+    <header>
+        <nav>
+            <a class="home" href="{{ url_for('serve_home') }}">Accueil</a>
+            <a class="messaging" href="{{ url_for('serve_messaging') }}">Messagerie</a>
+            <a class="myspace" href="{{ url_for('serve_myspace') }}">Mon Espace</a>
+            <a class="about" href="{{ url_for('serve_about') }}">À propos</a>
+        </nav>
+    </header>
+    <div class="main">
+        {% block content %}
+        <!-- Page-specific content goes here -->
+        {% endblock %}
+    </div>
+    <footer>
+        <p>© 2025 ENT Les Sentiers de la Lumière</p>
+    </footer>
+
+    <!-- Cloudflare Scripts (common across all pages) -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        (function(){
+            function c(){
+                var b = a.contentDocument || a.contentWindow.document;
+                if(b){
+                    var d = b.createElement('script');
+                    d.innerHTML = "window.__CF$cv$params={r:'93450c94de17c000',t:'MTc0NTMyNDE1My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+                    b.getElementsByTagName('head')[0].appendChild(d);
+                }
+            }
+            if(document.body){
+                var a = document.createElement('iframe');
+                a.height=1; a.width=1; a.style.position='absolute'; a.style.top=0; a.style.left=0; a.style.border='none'; a.style.visibility='hidden';
+                document.body.appendChild(a);
+                if('loading' !== document.readyState) c();
+                else if(window.addEventListener) document.addEventListener('DOMContentLoaded', c);
+                else {
+                    var e = document.onreadystatechange || function(){};
+                    document.onreadystatechange = function(b){ e(b); if('loading' !== document.readyState){ document.onreadystatechange=e; c(); } }
+                }
+            }
+        })();
+    </script>
+    <!-- Quote-fetching script -->
+    <script src="/static/js/quotes.js"></script>
+    <!-- Page-specific scripts -->
+    {% block scripts %}{% endblock %}
+</body>
+</html>
