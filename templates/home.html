@@ -1,84 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENT Sentiers - Page d'Accueil</title>
-    <link rel="stylesheet" href="../static/css/home.css">
-    <link rel="icon" href="../static/resources/img/site/ENT_Logo.webp" type="image/icon type">
-    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="banner">
-        <span class="logo-container">
-            <img class="logo" src="../static/resources/img/site/Logo_ESL.jpg" alt="Logo ENT Sentiers">
-            <h1>ENT Les Sentiers de la Lumière</h1>
-        </span>
-        <blockquote lang="fr">ٱلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ</blockquote>
+{% extends "base.html" %}
+
+{% block title %}ENT Sentiers - Page d'Accueil{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+    <!-- Welcome Section -->
+    <div class="welcome">
+        <h2>Bienvenue sur votre ENT</h2>
+        <p class="welcome-text">
+            Découvrez les dernières actualités, accédez à vos ressources éducatives et restez connecté avec notre communauté. 
+            <br>
+            Que votre apprentissage soit béni, إِنْ شَاءَ اللهُ.
+        </p>
     </div>
-    <header>
-        <nav>
-            <a class="home" href="home.html">Accueil</a>
-            <a class="messaging" href="messaging.html">Messagerie</a>
-            <a class="myspace" href="myspace.html">Mon Espace</a>
-            <a class="about" href="about.html">À propos</a>
-        </nav>
-    </header>
-    <div class="main">
-        <!-- Welcome Section -->
-        <div class="welcome">
-            <h2>Bienvenue sur votre ENT</h2>
-            <p class="welcome-text">
-                Découvrez les dernières actualités, accédez à vos ressources éducatives et restez connecté avec notre communauté. 
-                <br>
-                Que votre apprentissage soit béni, إِنْ شَاءَ اللهُ.
-            </p>
+
+    <!-- Content Wrapper for News, Separator, and Books -->
+    <div class="content-wrapper">
+        <!-- News Section -->
+        <div class="news">
+            <h2>Actualités</h2>
+            <div class="news-items">
+                <span class="arrow left-arrow">◄</span>
+                <div class="news-item">
+                    <h3>Rentrée 2024-2025</h3>
+                    <img src="{{ url_for('static', filename='resources/img/news/Rentree_24_25.png') }}" alt="Rentrée 2024-2025">
+                </div>
+                <span class="arrow right-arrow">►</span>
+            </div>
+            <div class="news-indicators">
+                <!-- Indicators added dynamically here -->
+            </div>
+            {% if session['role'] == 'secretary' %}
+                <button id="add-news-btn" class="news-btn add-btn">+</button>
+                <button id="delete-news-btn" class="news-btn delete-btn">🗑️</button>
+            {% endif %}
         </div>
 
-        <!-- Content Wrapper for News, Separator, and Books -->
-        <div class="content-wrapper">
-            <!-- News Section -->
-            <div class="news">
-                <h2>Actualités</h2>
-                <div class="news-items">
-                    <span class="arrow left-arrow">◄</span>
-                    <div class="news-item">
-                        <h3>Rentrée 2024-2025</h3>
-                        <img src="../static/resources/img/news/Rentree_24_25.png" alt="Rentrée 2024-2025">
-                    </div>
-                    <span class="arrow right-arrow">►</span>
-                </div>
-                <div class="news-indicators">
-                    <span class="indicator active"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                </div>
+        <div class="separator"></div>
+
+        <!-- Books Section -->
+        <div class="books">
+            <div class="books-item">
+                <h2>Nourania</h2>
+                <a href="{{ url_for('static', filename='resources/pdf/Nourania.pdf') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='resources/img/Nourania_First_Page.jpg') }}" alt="Nourania">
+                </a>
             </div>
-
-            <!-- Separator -->
-            <div class="separator"></div>
-
-            <!-- Books Section -->
-            <div class="books">
-                <div class="books-item">
-                    <h2>Nourania</h2>
-                    <a href="../static/resources/pdf/Nourania.pdf" target="_blank">
-                        <img src="../static/resources/img/Nourania_First_Page.jpg BLABLABLA" alt="Nourania">
-                    </a>
-                </div>
-                <div class="books-item">
-                    <h2>Quran</h2>
-                    <a href="../static/resources/pdf/Quran.pdf" target="_blank">
-                        <img src="../static/resources/img/Quran_First_Page.webp BLABLABLA" alt="Quran">
-                    </a>
-                </div>
+            <div class="books-item">
+                <h2>Quran</h2>
+                <a href="{{ url_for('static', filename='resources/pdf/Quran.pdf') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='resources/img/Quran_First_Page.webp') }}" alt="Quran">
+                </a>
             </div>
         </div>
     </div>
-    <footer>
-        <p>© 2025 ENT Les Sentiers de la Lumière</p>
-    </footer>
 
-    <script src="../static/js/home.js"></script>
-</body>
-</html>
+    <!-- Image Overlay -->
+    <div id="image-overlay" class="overlay" style="display:none;">
+        <span class="close-btn">&times;</span>
+        <img class="overlay-img" src="" alt="Zoomed Image">
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

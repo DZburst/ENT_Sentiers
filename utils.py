@@ -4,7 +4,7 @@ import os
 
 # Absolute path to school.db
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Directory of utils.py
-DB_PATH = os.path.join(BASE_DIR, '..', 'school.db')  # Go up one level to backend/
+DB_PATH = os.path.join(BASE_DIR, 'school.db')  # Go up one level to backend/
 
 def get_db_connection():
     """Establish a connection to the SQLite database and enable foreign key support."""
@@ -12,6 +12,7 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row  # Enable access by column name
     cursor = conn.cursor()
     cursor.execute("PRAGMA foreign_keys = ON;")
+    print("Current DB path:", DB_PATH)
     return conn, cursor
 
 def close_db_connection(conn, cursor):

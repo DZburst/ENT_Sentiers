@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENT Sentiers - Login</title>
-    <link rel="stylesheet" href="../static/css/login.css">
-    <link rel="icon" href="../static/resources/img/site/ENT_Logo.webp" type="image/icon type">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='resources/img/site/ENT_Logo.webp') }}" type="image/icon type">
 </head>
 <body>
     <div class="banner">
         <a href="https://www.ecole-sentierslumiere.fr/">
-            <img class="logo" src="../static/resources/img/site/Logo_ESL.jpg" alt="Logo ENT Sentiers">
+            <img class="logo" src="{{ url_for('static', filename='resources/img/site/Logo_ESL.jpg') }}" alt="Logo ENT Sentiers">
         </a>
         <h1>ENT Les Sentiers de la Lumière</h1>
     </div>
@@ -49,6 +49,6 @@
             <button type="submit">Se connecter</button>
         </form>
     </div>
-    <script src="../static/js/login.js"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
 </body>
 </html>

@@ -8,11 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.querySelector('#password').value;
         const role = document.querySelector('input[name="role"]:checked').value;
 
-        fetch('http://localhost:5000/api/login', {
+        fetch('/', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({username, password, role})
         })
 
@@ -39,8 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } 
             
             else if (data.role === 'secretary') {
-                alert('Secretary Home Page is in development, stay tuned!');
-                // window.location.href = '/secretary_home';
+                window.location.href = '/home';
             }
         })
 
